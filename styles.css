@@ -1,0 +1,71 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+*{
+    background-color:rgb(44, 40, 40) ;
+    color: rgb(199, 191, 202);
+    font-family:'Play', sans-serif ;
+
+
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+    color: #e6b0b0;
+    text-align: center;
+    line-height: 1.25;                        
+}
+
+
+p{
+    line-height: 1.5;
+    font-size: 18px
+}
+
+li{
+    list-style-type: none;
+}
+/*NAVBAR*/
+
+nav{
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+/*For centering*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link--anchor{
+    margin: 0 12px;
+    color: #ae89cc;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.nav__link--anchor-primary{
+    background-color: rgb(54, 199, 108);
+    padding: 8px 22px;
+    border-radius: 50px;
+    color:#ca44cc ;
+    transition: all 300ms ease;
+}
+
+.nav__link--anchor-primary:hover{
+    background-color: #4a2c5a;
+}
+
+.personal__logo {
+    font-size: 24px ;
+    color: rgb(28, 176, 82);
+    margin: 0 12px;
+    font-weight:400 ;
+}
