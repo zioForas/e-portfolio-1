@@ -1,161 +1,305 @@
 /*General classes*/
 
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-*{
-    background-color:rgb(44, 40, 40) ;
-    
-    font-family:'Play', sans-serif ;
-    
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+* {
+  background-color: rgb(44, 40, 40);
 
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Play", sans-serif;
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+
 }
 
-h1, h2, h3, h4, h5, h6, span {
-    color: #bfbbbf;
-    text-align: center;
-    line-height: 1.25;                        
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: #bfbbbf;
+  text-align: center;
+  line-height: 1.25;
 }
 
-h1{
-    font-size: 36px;
+h1 {
+  font-size: 36px;
   /*  padding-bottom:28px ; 
     padding-top:28px ; same function si done below in .about-me__info--para and title*/
 }
 
-
-p{
-    line-height: 1.25;
-    font-size: 16px;
-    color: rgb(199, 191, 202);
+p {
+  line-height: 1.25;
+  font-size: 16px;
+  color: rgb(199, 191, 202);
 }
 
-
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
 
-.flex-1{
-   flex:1; 
+.flex-1 {
+  flex: 1;
+}
+
+.container {
+  /*for technology stack separation from img and container. targets a div*/
+  padding:50px 0;
 }
 
 .row {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .text--purple {
-   color:#975fc4;
-}
-/*NAVBAR*/
-
-nav{
-    height: 100px;
-    width: 100%;
-    max-width: 1000px;
-/*For centering*/
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  color: #975fc4;
 }
 
-
-.nav__link--list{
-    display: flex;
+section:nth-child(even) {
+  background-color: #372b3d;
 }
 
-.nav__link--anchor{
-    margin: 0 12px;
-    color: #ae89cc;
-    text-decoration: none;
-    font-weight: 400;
-
+.section__title {
+    margin-bottom: 20px;
 }
 
-.nav__link--anchor-primary{
-    background-color: rgb(54, 199, 108);
-    padding: 8px 22px;
-    border-radius: 50px;
-    color:#ca44cc ;
-    transition: all 500ms ease;
+/*          NAVBAR              */
+
+nav {
+  height: 100px;
+  width: 100%;
+  max-width: 1000px;
+  /*For centering*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav__link--anchor-primary:hover{
-    background-color: #4a2c5a;
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link--anchor {
+  margin: 0 12px;
+  color: #ae89cc;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav__link--anchor-primary {
+  background-color: rgb(54, 199, 108);
+  padding: 8px 22px;
+  border-radius: 50px;
+  color: #ca44cc;
+  transition: all 500ms ease;
+}
+
+.nav__link--anchor-primary:hover {
+  background-color: #4a2c5a;
 }
 
 .personal__logo {
-    font-size: 24px ;
-    color: rgb(28, 176, 82);
-    margin: 0 12px;
-    font-weight:400 ;
+  font-size: 24px;
+  color: rgb(28, 176, 82);
+  margin: 0 12px;
+  font-weight: 400;
 }
 
 /*ABout ME*/
 
-
-#about-me{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+#about-me {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-me__info--container{
-    display: flex;
-    /*tut way
+.about-me__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me__info--container {
+  display: flex;
+  /*tut way
     flex-direction:column
     jcc;
     otherwhise use flex flow*/
-    flex-flow: column;
-    align-items:center; /*centers horizontally cuz swapped*/
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  flex-flow: column;
+  align-items: center; /*centers horizontally cuz swapped*/
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.about-me__picture--mask{ 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 28px;
+.about-me__picture--mask {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 28px;
 }
 
 .about-me__picture {
-    width: 92%;    /* makes 100% of its parent*/
-     /*improving pic*/
-    transform: scale(1.3);
+  width: 92%; /* makes 100% of its parent*/
+  /*improving pic*/
+  transform: scale(1.3);
 
-    /*this is for moving the image inside*/
-    transform-origin: 65px 90% 0;
-    }
+  /*this is for moving the image inside*/
+  transform-origin: 65px 90% 0;
+}
 
-  .about-me__info--para a{   
-    /*this targets only the a which is a child in abt-me_info--para parent*/
-    text-decoration: none;
-  }
+.about-me__info--para a {
+  /*this targets only the a which is a child in abt-me_info--para parent*/
+  text-decoration: none;
+}
 
-  .about-me__info--para strong, a{
-    color:rgb(54, 199, 108) ;
-  }
-    .about-me__info--title {
-    margin-bottom: 16px;
-  }   
-  
-  .about-me__info--para {
-    font-size: 20px;
-    margin-bottom: 28px;
-  }  
+.about-me__info--para strong,
+a {
+  color: rgb(54, 199, 108);
+}
+.about-me__info--title {
+  margin-bottom: 16px;
+}
+
+.about-me__info--para {
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+
+.about-me__link {
+  font-size: 20px;
+  color: rgb(54, 199, 108);
+  text-decoration: none;
+  padding: 0 13px;
+}
+
+.about-me__img--container {
+  flex: 1;
+  /*for centering image*/
+  display: flex;
+  align-items: center;
+}
+
+.about-me__img {
+  width: 100%;
+}
+
+/*      Tech-stack        */
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 500ms ease;
     
-  .about-me__link {
-    font-size: 20px;
-    color: rgb(54, 199, 108);
-    text-decoration: none;
-    padding: 0 13px;
- }
+}
 
+.language:hover .language__img{
+    filter: hue-rotate(260deg);
+    opacity: 0.86;
+    transform: translateY(0) scale(0.89);
+    transition: all 1000ms ease;
+    
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative; /*makes it relative to its parent otherwise names go to front page*/
+}
+
+/*this makes the tech stacks images small and centered*/
+.language__img--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 25px 16px;
+   /* display: flex; read below */
+}
+
+/*this also kinda does the same thing but it's my own may not tutorial way
+ so ima keep it a stack
+
+.language__list{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
+}
+*/
+
+.language__list{
+    display: flex;
+    width:100%;
+    flex-flow:wrap;
+}
+
+.language__name{
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    opacity: 1;
+    
+}
+
+/* PROJECTS */
+
+.project__img{
+    max-width: 100%;
+    transition: all 500ms ease ;
+}
+
+.project__wrapper{
+    display: flex;
+    box-shadow: 0 20px 80px rgba(255, 255, 255, 0.767);
+    border-radius: 20px;
+    overflow: hidden;               /*img is overflowing it so we use this so it prevents it*/ 
+    
+    position: relative;     /*this is for my stupid background, its so it overlaps the bg and keeps the values above it */
+   
+
+}
+
+.project__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 10;
+}
+
+.project:hover .project__wrapper:before {
+  
+    opacity: 0.7;
+
+}
+
+.project:hover .project__img{
+    transform: scale(1.07);
+    backdrop-filter: blur(px);
+   
+   
+    
+    
+}
